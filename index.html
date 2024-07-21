@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas de población en Áreas Metropolitanas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .map-item {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .map-item:hover {
+            transform: translateY(-5px);
+        }
+        .map-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .map-item h2 {
+            font-size: 18px;
+            margin: 10px;
+            text-align: center;
+        }
+        .map-item a {
+            display: block;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .map-item a:hover {
+            background-color: #0056b3;
+        }
+        .description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 14px;
+            color: #666;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mapas de población en Áreas Metropolitanas con resolución de 30mx30m</h1>
+    <p class="description">Cálculos a partir de las <a href="https://data.humdata.org/dataset/mexico-high-resolution-population-density-maps-demographic-estimates" target="_blank">estimaciones realizadas por Facebook</a></p>
+    <div class="gallery">
+      <div class="map-item">
+        <img src="graficas/zm_10_Tuxtla GutiВrrez.png" alt="Tuxtla Gutiérrez">
+        <h2>Tuxtla Gutiérrez</h2>
+        <a href="graficas/zm_10_Tuxtla GutiВrrez.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_11_Juаrez.png" alt="Juárez">
+        <h2>Juárez</h2>
+        <a href="graficas/zm_11_Juаrez.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_12_Chihuahua.png" alt="Chihuahua">
+        <h2>Chihuahua</h2>
+        <a href="graficas/zm_12_Chihuahua.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_13_Valle de MВxico.png" alt="Valle de México">
+        <h2>Valle de México</h2>
+        <a href="graficas/zm_13_Valle de MВxico.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_14_Leвn.png" alt="León">
+        <h2>León</h2>
+        <a href="graficas/zm_14_Leвn.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_15_San Francisco del Rincвn.png" alt="San Francisco del Rincón">
+        <h2>San Francisco del Rincón</h2>
+        <a href="graficas/zm_15_San Francisco del Rincвn.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_16_Moroleвn-Uriangato.png" alt="Moroleón-Uriangato">
+        <h2>Moroleón-Uriangato</h2>
+        <a href="graficas/zm_16_Moroleвn-Uriangato.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_17_Acapulco.png" alt="Acapulco">
+        <h2>Acapulco</h2>
+        <a href="graficas/zm_17_Acapulco.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_18_Pachuca.png" alt="Pachuca">
+        <h2>Pachuca</h2>
+        <a href="graficas/zm_18_Pachuca.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_19_Tulancingo.png" alt="Tulancingo">
+        <h2>Tulancingo</h2>
+        <a href="graficas/zm_19_Tulancingo.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_1_Aguascalientes.png" alt="Aguascalientes">
+        <h2>Aguascalientes</h2>
+        <a href="graficas/zm_1_Aguascalientes.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_20_Tula.png" alt="Tula">
+        <h2>Tula</h2>
+        <a href="graficas/zm_20_Tula.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_21_Guadalajara.png" alt="Guadalajara">
+        <h2>Guadalajara</h2>
+        <a href="graficas/zm_21_Guadalajara.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_22_Puerto Vallarta.png" alt="Puerto Vallarta">
+        <h2>Puerto Vallarta</h2>
+        <a href="graficas/zm_22_Puerto Vallarta.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_23_Ocotlаn.png" alt="Ocotlán">
+        <h2>Ocotlán</h2>
+        <a href="graficas/zm_23_Ocotlаn.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_24_Toluca.png" alt="Toluca">
+        <h2>Toluca</h2>
+        <a href="graficas/zm_24_Toluca.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_25_Morelia.png" alt="Morelia">
+        <h2>Morelia</h2>
+        <a href="graficas/zm_25_Morelia.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_26_Zamora-Jacona.png" alt="Zamora-Jacona">
+        <h2>Zamora-Jacona</h2>
+        <a href="graficas/zm_26_Zamora-Jacona.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_27_La Piedad-PВnjamo.png" alt="La Piedad-Pénjamo">
+        <h2>La Piedad-Pénjamo</h2>
+        <a href="graficas/zm_27_La Piedad-PВnjamo.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_28_Cuernavaca.png" alt="Cuernavaca">
+        <h2>Cuernavaca</h2>
+        <a href="graficas/zm_28_Cuernavaca.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_29_Cuautla.png" alt="Cuautla">
+        <h2>Cuautla</h2>
+        <a href="graficas/zm_29_Cuautla.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_2_Tijuana.png" alt="Tijuana">
+        <h2>Tijuana</h2>
+        <a href="graficas/zm_2_Tijuana.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_30_Tepic.png" alt="Tepic">
+        <h2>Tepic</h2>
+        <a href="graficas/zm_30_Tepic.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_31_Monterrey.png" alt="Monterrey">
+        <h2>Monterrey</h2>
+        <a href="graficas/zm_31_Monterrey.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_32_Oaxaca.png" alt="Oaxaca">
+        <h2>Oaxaca</h2>
+        <a href="graficas/zm_32_Oaxaca.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_33_Tehuantepec.png" alt="Tehuantepec">
+        <h2>Tehuantepec</h2>
+        <a href="graficas/zm_33_Tehuantepec.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_34_Puebla-Tlaxcala.png" alt="Puebla-Tlaxcala">
+        <h2>Puebla-Tlaxcala</h2>
+        <a href="graficas/zm_34_Puebla-Tlaxcala.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_35_Tehuacаn.png" alt="Tehuacán">
+        <h2>Tehuacán</h2>
+        <a href="graficas/zm_35_Tehuacаn.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_36_QuerВtaro.png" alt="Querétaro">
+        <h2>Querétaro</h2>
+        <a href="graficas/zm_36_QuerВtaro.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_37_Cancгn.png" alt="Cancún">
+        <h2>Cancún</h2>
+        <a href="graficas/zm_37_Cancгn.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_38_San Luis Potosб-Soledad de Graciano Sаnchez.png" alt="San Luis Potosí-Soledad de Graciano Sánchez">
+        <h2>San Luis Potosí-Soledad de Graciano Sánchez</h2>
+        <a href="graficas/zm_38_San Luis Potosб-Soledad de Graciano Sаnchez.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_39_Rбoverde-Ciudad Fernаndez.png" alt="Rioverde-Ciudad Fernández">
+        <h2>Rioverde-Ciudad Fernández</h2>
+        <a href="graficas/zm_39_Rбoverde-Ciudad Fernаndez.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_3_Mexicali.png" alt="Mexicali">
+        <h2>Mexicali</h2>
+        <a href="graficas/zm_3_Mexicali.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_40_Guaymas.png" alt="Guaymas">
+        <h2>Guaymas</h2>
+        <a href="graficas/zm_40_Guaymas.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_41_Villahermosa.png" alt="Villahermosa">
+        <h2>Villahermosa</h2>
+        <a href="graficas/zm_41_Villahermosa.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_42_Tampico.png" alt="Tampico">
+        <h2>Tampico</h2>
+        <a href="graficas/zm_42_Tampico.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_43_Reynosa-Rбo Bravo.png" alt="Reynosa-Río Bravo">
+        <h2>Reynosa-Río Bravo</h2>
+        <a href="graficas/zm_43_Reynosa-Rбo Bravo.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_44_Matamoros.png" alt="Matamoros">
+        <h2>Matamoros</h2>
+        <a href="graficas/zm_44_Matamoros.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+      <img src="graficas/zm_45_Nuevo Laredo.png" alt="Nuevo Laredo">
+      <h2>Nuevo Laredo</h2>
+      <a href="graficas/zm_45_Nuevo Laredo.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_46_Tlaxcala-Apizaco.png" alt="Tlaxcala-Apizaco">
+        <h2>Tlaxcala-Apizaco</h2>
+        <a href="graficas/zm_46_Tlaxcala-Apizaco.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_47_Veracruz.png" alt="Veracruz">
+        <h2>Veracruz</h2>
+        <a href="graficas/zm_47_Veracruz.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_48_Xalapa.png" alt="Xalapa">
+        <h2>Xalapa</h2>
+        <a href="graficas/zm_48_Xalapa.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_49_Poza Rica.png" alt="Poza Rica">
+        <h2>Poza Rica</h2>
+        <a href="graficas/zm_49_Poza Rica.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_4_La Laguna.png" alt="La Laguna">
+        <h2>La Laguna</h2>
+        <a href="graficas/zm_4_La Laguna.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_50_Orizaba.png" alt="Orizaba">
+        <h2>Orizaba</h2>
+        <a href="graficas/zm_50_Orizaba.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_51_Minatitlаn.png" alt="Minatitlán">
+        <h2>Minatitlán</h2>
+        <a href="graficas/zm_51_Minatitlаn.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_52_Coatzacoalcos.png" alt="Coatzacoalcos">
+        <h2>Coatzacoalcos</h2>
+        <a href="graficas/zm_52_Coatzacoalcos.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_53_Cвrdoba.png" alt="Córdoba">
+        <h2>Córdoba</h2>
+        <a href="graficas/zm_53_Cвrdoba.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_54_Acayucan.png" alt="Acayucan">
+        <h2>Acayucan</h2>
+        <a href="graficas/zm_54_Acayucan.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_55_MВrida.png" alt="Mérida">
+        <h2>Mérida</h2>
+        <a href="graficas/zm_55_MВrida.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_56_Zacatecas-Guadalupe.png" alt="Zacatecas-Guadalupe">
+        <h2>Zacatecas-Guadalupe</h2>
+        <a href="graficas/zm_56_Zacatecas-Guadalupe.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_57_Celaya.png" alt="Celaya">
+        <h2>Celaya</h2>
+        <a href="graficas/zm_57_Celaya.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_58_Tianguistenco.png" alt="Tianguistenco">
+        <h2>Tianguistenco</h2>
+        <a href="graficas/zm_58_Tianguistenco.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_59_Teziutlаn.png" alt="Teziutlán">
+        <h2>Teziutlán</h2>
+        <a href="graficas/zm_59_Teziutlаn.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_5_Saltillo.png" alt="Saltillo">
+        <h2>Saltillo</h2>
+        <a href="graficas/zm_5_Saltillo.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_6_Monclova-Frontera.png" alt="Monclova-Frontera">
+        <h2>Monclova-Frontera</h2>
+        <a href="graficas/zm_6_Monclova-Frontera.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_7_Piedras Negras.png" alt="Piedras Negras">
+        <h2>Piedras Negras</h2>
+        <a href="graficas/zm_7_Piedras Negras.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_8_Colima-Villa de ╡lvarez.png" alt="Colima-Villa de Álvarez">
+        <h2>Colima-Villa de Álvarez</h2>
+        <a href="graficas/zm_8_Colima-Villa de ╡lvarez.html">Ver mapa completo</a>
+    </div>
+    <div class="map-item">
+        <img src="graficas/zm_9_Tecomаn.png" alt="Tecomán">
+        <h2>Tecomán</h2>
+        <a href="graficas/zm_9_Tecomаn.html">Ver mapa completo</a>
+    </div>
+
+    </div>
+    <footer class="footer">
+      <p>Elaborado por
+          <a href="https://twitter.com/jjsantoso" target="_blank" rel="noopener noreferrer">@jjsantoso</a>
+          (<a href="https://github.com/jjsantos01" target="_blank" rel="noopener noreferrer">GitHub</a>)
+      </p>
+    </footer>
+</body>
+</html>

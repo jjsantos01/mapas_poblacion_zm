@@ -1,14 +1,5 @@
-# mapas_poblacion_zm
- Este repositorio contiene los archivos para generar mapas de las zonas habitadas de las Zonas Metropolitanas de México a partir de las estimaciones de población georreferenciadas que calculó [Facebook](https://data.humdata.org/dataset/mexico-high-resolution-population-density-maps-demographic-estimates)
+# Mapas poblacion por Zona Metropolitana
 
-Algunos ejemplos:
- ## Aguascalientes
+ Este repositorio contiene los archivos para generar mapas de las zonas habitadas de las Zonas Metropolitanas de México a partir de las estimaciones de población georreferenciadas con resolución 30mx30m que calculó [Facebook](https://data.humdata.org/dataset/mexico-high-resolution-population-density-maps-demographic-estimates)
 
- ![](/graficas/zm_1_Aguascalientes.png)
-
-## Tijuana
-
- ![](/graficas/zm_2_Tijuana.png)
-
- ## Acapulco
- ![](/graficas/zm_17_Acapulco.png)
+Puede consultar los mapas completos en https://jjsantos01.github.io/mapas_poblacion_zm.
